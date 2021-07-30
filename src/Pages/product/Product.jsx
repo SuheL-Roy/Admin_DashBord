@@ -1,26 +1,26 @@
 import React from "react";
 import "./product.css";
-import { Link } from "react-router-dom";
-import Chart from "../../Components/chart/Chart";
-import { productData } from "../../dummyData";
+import { Link, useLocation } from "react-router-dom";
 import {Publish} from '@material-ui/icons'
 export default function Product() {
+  const {location} = useLocation();
+  
+  console.log(location);
   return (
     <div className="product">
       <div className="productTitleContainer">
-        <h className="productTitle">Product</h>
+        <h className="productTitle">Movie</h>
         <Link to="/newproduct">
           <button className="ProductAddButton">Create</button>
         </Link>
       </div>
       <div className="productTop">
-        <div className="productTopLeft">
-          <Chart data={productData} dataKey="Sales" title="Sales Perfomance" />
-        </div>
+        
         <div className="productTopRight">
           <div className="productinfoTop">
             <img
-              src="https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+            // src="https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+              //src={movies.img}
               alt=""
               className="productInfoImg"
             />

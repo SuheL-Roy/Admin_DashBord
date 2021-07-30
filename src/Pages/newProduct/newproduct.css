@@ -21,7 +21,7 @@
   
   .addProductItem > input {
     padding: 10px;
-    outline: none;
+    outline: nonecd;
   }
   
   .addProductItem > select {

@@ -12,7 +12,8 @@ import {
   DynamicFeed,
   ChatBubbleOutline,
   WorkOutline,
-  Report
+  Report,
+  PlayCircleFilledOutlined
 } from "@material-ui/icons";
 import {Link} from 'react-router-dom';
 export default function Sidebar() {
@@ -47,10 +48,10 @@ export default function Sidebar() {
               Users
             </li>
             </Link>
-            <Link to="/products" className="link">
+            <Link to="/movies" className="link">
             <li className="sidebarListitem">
-              <Storefront className="sidebaricon" />
-              Products
+              <PlayCircleFilledOutlined className="sidebaricon" />
+              Movies
             </li>
             </Link>
             <li className="sidebarListitem">
