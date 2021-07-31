@@ -12,6 +12,30 @@ export const getmovieFailure = () => ({
 });
 
 
+export const addmovieStart = () => ({
+    type: "ADD_MOVIE_START",
+});
+
+export const addmovieSuccess = (movie) => ({
+    type: "ADD_MOVIE_SUCCESS",
+    payload: movie,
+});
+export const addmovieFailure = () => ({
+    type: "ADD_MOVIE_FAILURE",
+});
+
+export const updatemovieStart = () => ({
+    type: "UPDATE_MOVIE_START",
+});
+
+export const updatemovieSuccess = (movie) => ({
+    type: "UPDATE_MOVIE_SUCCESS",
+    payload: movie,
+});
+export const updatemovieFailure = () => ({
+    type: "UPDATE_MOVIE_FAILURE",
+});
+
 
 export const deletemovieStart = () => ({
     type: "DELETE_MOVIE_START",

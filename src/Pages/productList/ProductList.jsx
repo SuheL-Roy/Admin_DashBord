@@ -8,17 +8,18 @@ import { MovieContext } from '../../context/movieContext/MovieContext';
 import { deleteMovies, getMovies } from '../../context/movieContext/apiCalls';
 export default function ProductList() {
 
-  const { movies, dispatch } = useContext(MovieContext)
-  useEffect(() => {
-    getMovies(dispatch)
+  const { movies, dispatch } = useContext(MovieContext);
 
-  },[dispatch]);
+  useEffect(() => {
+    getMovies(dispatch);
+
+  }, [dispatch]);
 
  
 
     const handleDelete = (id) => {
      // setData(data.filter((item) => item.id !== id));
-     deleteMovies(id,dispatch);
+     deleteMovies(id, dispatch);
     };
 
 //console.log(movies);
@@ -48,10 +49,14 @@ export default function ProductList() {
         field: "action",
         headerName: "Action",
         width: 150,
-        renderCell: (params) => {
+        
+     renderCell: (params) => {
           return (
             <>
-              <Link to={{pathname:"/product/" + params.row._id, movie: params.row }}>
+              <Link 
+               to={{ pathname: "/product/" + params.row._id, movie: params.row }}
+              //to = {{ pathname:"/product/" + params.row._id , movie: params.row}}
+              >
                 <button className="productListEdit">Edit</button>
               </Link>
               <DeleteOutline
@@ -61,6 +66,7 @@ export default function ProductList() {
             </>
           );
         },
+      
       },
     ];
     return (
